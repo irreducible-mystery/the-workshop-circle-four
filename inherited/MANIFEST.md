@@ -48,3 +48,5 @@ confirm the source still says what it said.*
 | inherited/system/SYSTEM-NORMS.md | irreducible-mystery/the-workshop-circle-two | cb701e96256cf5c03c2f06ffc1b9bc2d421b764f | 5094da7f9abbd8187024e15128e6c2d8517e284ed78db782ea62f444187a46ff |
 | inherited/system/SYSTEM-REGISTER.md | irreducible-mystery/the-workshop-circle-two | cb701e96256cf5c03c2f06ffc1b9bc2d421b764f | 2e5980b5f460d977d6fa183a734da7eeb1613e004c7845acd841c0af2aca92c9 |
 | inherited/system/audit/s_append_only.sh | irreducible-mystery/the-workshop-circle-two | cb701e96256cf5c03c2f06ffc1b9bc2d421b764f | 09f45fa14c59d6830ad5c5ddae1f7bff7945928d7f8e2399b088741c1a1318aa |
+| crossing/C4-R0-BUILDER-ACCEPT.md | courier ferry (upload, 2026-07-29 third leg) | verified against the pin of record (SR19) | 7d806c5e57ee655d2605c6969cb28c05ffba22eaea7a3bc0d7ab5da50adc711d |
+| crossing/SYSTEM-R0-BUILDER-WIRING-WORD.md | courier ferry (upload, 2026-07-29 third leg) | verified against the pin of record (SR19) | 03e9a0a17778ecea2e57312cb5134b0510586bd1dd33fe40ec7a6546a5981d8b |

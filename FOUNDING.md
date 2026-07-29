@@ -150,3 +150,22 @@ says otherwise" — resolves here, because this is that commit.
 - **This circle:** the work. Q1, Q2, Q3, at the scope the charge
   states — with "no," "not here," and a recorded obstruction equal in
   standing to a proof.
+
+---
+
+## ADDENDUM, THE BODIES' LANDING — appended 2026-07-29, third leg
+
+The three letters the founding filed by pin arrived as files and
+**every one verifies EXACT**: `C4-R0-BUILDER-ACCEPT.md` at `7d806c5e…`
+and `SYSTEM-R0-BUILDER-WIRING-WORD.md` at `03e9a0a1…` now sit in
+`crossing/` byte-exact with manifest rows appended (gate green on 40
+rows); `C4-R1-BUILDER-REPLY.md` at `e6f4584f…` sits in `letters/`. The
+builder's ACCEPT — attested at the founding, F7 — is now VERIFIED
+against its pin in this tree. F7 closes. Of record from the filed
+ACCEPT: the round-0 handshake's full name and pin,
+`C4-R0-BUILDER-HANDSHAKE.md` at
+`0f235585e0b9d00bde791d073e7c814a7f69a41f8417df9b1bb097ecda720f52` —
+F6 narrows to one custody, the courier's round-0 download. The
+prover's round-1 reply (`letters/C4-R1-PROVER-REPLY.md`) records the
+rest of the leg: the wiring executed on both seats' words, P1 applied,
+the P2 candidate at its couriered pin awaiting the builder's bite.
