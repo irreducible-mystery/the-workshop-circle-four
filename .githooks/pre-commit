@@ -1,0 +1,35 @@
+#!/bin/sh
+# Circle Four pre-commit chain — wired at round 2 on both seats' words.
+# Install once, per clone:
+#     git config core.hooksPath .githooks
+#
+# The carry-forward gate's word: the builder's, round 2 (C4-R2-BUILDER-WORDS.md,
+# "1fed9f22…"), given with the finding that its green proves manifest↔tree
+# AGREEMENT and not preservation since admission — CF-i records that in the
+# gate's own declaration.  The manifest's prefix gate (P3) is what closes the
+# two compound modes that finding named, at the write surface where they are
+# written.  Both seats' words on both; both bitten on both containers.
+
+sh audit/c4_manifest_prefix.sh || exit 1
+sh audit/c4_inherited.sh || exit 1
+
+# The carried-declaration gate: lean/C4_Q1.lean copies sealed definitions
+# because it is a zero-import single file, so every copy is re-measured
+# against the sealed artifact here. Bitten at birth on a body plant and a
+# docstring plant, both exit 1, measured without a pipe.
+sh audit/c4_carried_defs.sh || exit 1
+
+# The seal-prefix gate: lean/C4_Q3.lean carries the sealed artifact WHOLE,
+# because instantiating the sealed classification needs the sealed theorems
+# and a zero-import file cannot import them. One prefix test, nothing to
+# smuggle past. Bitten at birth: region edit BITTEN, lawful tail append
+# PASS, symlinked carrier BITTEN.
+sh audit/c4_seal_prefix.sh || exit 1
+
+# Q3-i, the ratchet (the builder's proposal, round 7, both seats' words):
+# every Lean artifact must grow by appending — HEAD's copy a byte-prefix of
+# the working copy, newline boundary included. Born because a delivery
+# sentence said "grew by appending" where the measurement said "inserted
+# before the closing end Zi", seven bytes apart. Bitten at birth on both
+# stated falsifiers: insertion-before-close BITTEN, pure append PASS.
+sh audit/c4_artifact_prefix.sh || exit 1
