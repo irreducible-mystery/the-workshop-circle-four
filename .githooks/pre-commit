@@ -25,3 +25,11 @@ sh audit/c4_carried_defs.sh || exit 1
 # smuggle past. Bitten at birth: region edit BITTEN, lawful tail append
 # PASS, symlinked carrier BITTEN.
 sh audit/c4_seal_prefix.sh || exit 1
+
+# Q3-i, the ratchet (the builder's proposal, round 7, both seats' words):
+# every Lean artifact must grow by appending — HEAD's copy a byte-prefix of
+# the working copy, newline boundary included. Born because a delivery
+# sentence said "grew by appending" where the measurement said "inserted
+# before the closing end Zi", seven bytes apart. Bitten at birth on both
+# stated falsifiers: insertion-before-close BITTEN, pure append PASS.
+sh audit/c4_artifact_prefix.sh || exit 1
