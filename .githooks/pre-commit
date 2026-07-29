@@ -18,3 +18,10 @@ sh audit/c4_inherited.sh || exit 1
 # against the sealed artifact here. Bitten at birth on a body plant and a
 # docstring plant, both exit 1, measured without a pipe.
 sh audit/c4_carried_defs.sh || exit 1
+
+# The seal-prefix gate: lean/C4_Q3.lean carries the sealed artifact WHOLE,
+# because instantiating the sealed classification needs the sealed theorems
+# and a zero-import file cannot import them. One prefix test, nothing to
+# smuggle past. Bitten at birth: region edit BITTEN, lawful tail append
+# PASS, symlinked carrier BITTEN.
+sh audit/c4_seal_prefix.sh || exit 1

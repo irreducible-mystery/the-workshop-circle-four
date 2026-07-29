@@ -36,13 +36,13 @@ ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || {
 cd "$ROOT" || exit 2
 
 SEAL=inherited/circle-two-three/lean/Zi.lean
-MINE=lean/C4_Q1.lean
+CARRYING_FILES="lean/C4_Q1.lean"   # every file carrying declaration-by-declaration
 HELPER=audit/c4_carried_defs.py
 
 # Every declaration copied out of the sealed artifact, by name.
 CARRIED="sumTo swapT eBasis antiM eDiff upTo upperPairs"
 
-for f in "$SEAL" "$MINE" "$HELPER"; do
+for f in "$SEAL" $CARRYING_FILES "$HELPER"; do
     if [ ! -f "$f" ]; then
         echo "c4_carried_defs: missing $f" >&2
         exit 2
@@ -50,6 +50,9 @@ for f in "$SEAL" "$MINE" "$HELPER"; do
 done
 
 red=0
+total=0
+
+for MINE in $CARRYING_FILES; do
 
 # --- the region check (finding Q1-i, the builder's, round 4) ----------------
 # The name list alone cannot see an EXTRA declaration smuggled inside the
@@ -59,8 +62,8 @@ red=0
 # `def` inside the banner must exit 1.
 region=$(awk '/^   CARRIED — byte-for-byte from the sealed artifact/{f=1} \
               /^   NEW — Circle Four.s own\./{f=0} f' "$MINE" \
-         | grep -E '^(def|theorem|abbrev|instance|structure|inductive) ' \
-         | sed -E 's/^(def|theorem|abbrev|instance|structure|inductive) +([^ (:]+).*/\2/')
+         | grep -E '^[[:space:]]*(def|theorem|abbrev|instance|structure|inductive) ' \
+         | sed -E 's/^[[:space:]]*(def|theorem|abbrev|instance|structure|inductive) +([^ (:]+).*/\2/')
 if [ -z "$region" ]; then
     echo "c4_carried_defs: the CARRIED region did not parse — banner moved or absent" >&2
     exit 2
@@ -76,21 +79,22 @@ for found in $region; do
     fi
 done
 
-count=0
 for name in $CARRIED; do
-    count=$((count + 1))
+    total=$((total + 1))
     a=$(python3 "$HELPER" "$SEAL" "$name") || exit 2
     b=$(python3 "$HELPER" "$MINE" "$name") || exit 2
     if [ "$a" = "$b" ]; then
-        printf '  %-14s CARRIED EXACT\n' "$name"
+        printf '  %-14s CARRIED EXACT   (%s)\n' "$name" "$MINE"
     else
-        printf '  %-14s DRIFT: the copy no longer matches the seal\n' "$name"
+        printf '  %-14s DRIFT: the copy no longer matches the seal   (%s)\n' "$name" "$MINE"
         red=1
     fi
 done
 
+done
+
 if [ "$red" -eq 0 ]; then
-    echo "RESULT: $count carried declarations re-measured against the seal.  PASS."
+    echo "RESULT: $total carried declarations re-measured against the seal.  PASS."
     exit 0
 else
     echo "RESULT: a carried declaration drifted from the sealed artifact.  FAIL."
