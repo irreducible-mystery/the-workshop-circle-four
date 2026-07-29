@@ -3029,4 +3029,50 @@ theorem gauge_quotient_exactly_two :
     intro F hF
     exact at_most_two_classes F hF.1 hF.2
 
+
+/-! ### Q3's precondition, made exact: the class count as a bijection
+
+    Q3 asks what identifying the class count with a named cohomology
+    group would require. Before requirements can be measured, the thing
+    to be identified must be pinned down, so: the count itself, in the
+    strongest form available without `Classical.choice`.
+
+    `Quot` cannot be mapped INTO `Bool` here — deciding which class a
+    symbol lies in would mean deciding an existential over gauges, and
+    this record does not buy choice. So the bijection is exhibited in the
+    direction that needs no decision, with both halves proved: a map from
+    a two-element type that is injective and surjective. That is exactly
+    "the class count is two" and it is all that is exactly that. -/
+
+/-- The two classes, indexed by a two-element type. -/
+def classOfBool : Bool → GaugeClasses
+  | false => cls ⟨sliceCore one, boson_classified⟩
+  | true  => cls ⟨sliceCore (neg one), fermion_classified⟩
+
+/-- **Surjective**: every class is one of the two. -/
+theorem classOfBool_surjective : ∀ q : GaugeClasses, ∃ b : Bool, classOfBool b = q := by
+  intro q
+  rcases gauge_quotient_exactly_two.2 q with h | h
+  · exact ⟨false, h.symm⟩
+  · exact ⟨true, h.symm⟩
+
+/-- **Injective**: the two are genuinely different classes. -/
+theorem classOfBool_injective : ∀ b₁ b₂ : Bool, classOfBool b₁ = classOfBool b₂ → b₁ = b₂ := by
+  intro b₁ b₂ h
+  cases b₁ <;> cases b₂
+  · rfl
+  · exact absurd h gauge_quotient_exactly_two.1
+  · exact absurd h.symm gauge_quotient_exactly_two.1
+  · rfl
+
+/-- **THE CLASS COUNT, as one sentence**: the classes of the gauge
+    relation on the sealed domain are in bijection with a two-element
+    type. This is the object Q3 asks about identifying, and it is a
+    SET-level statement — no group structure is claimed on either side,
+    because none is built on either side. -/
+theorem class_count_is_two :
+    (∀ q : GaugeClasses, ∃ b : Bool, classOfBool b = q)
+      ∧ (∀ b₁ b₂ : Bool, classOfBool b₁ = classOfBool b₂ → b₁ = b₂) :=
+  ⟨classOfBool_surjective, classOfBool_injective⟩
+
 end Zi
