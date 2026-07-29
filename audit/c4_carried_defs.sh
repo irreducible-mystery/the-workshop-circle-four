@@ -50,6 +50,32 @@ for f in "$SEAL" "$MINE" "$HELPER"; do
 done
 
 red=0
+
+# --- the region check (finding Q1-i, the builder's, round 4) ----------------
+# The name list alone cannot see an EXTRA declaration smuggled inside the
+# CARRIED banner: the smuggled text wears the seal's authority and nobody
+# measures it. So the region must parse to exactly the named declarations
+# and nothing else. Falsifier the patch was written against: an eighth
+# `def` inside the banner must exit 1.
+region=$(awk '/^   CARRIED — byte-for-byte from the sealed artifact/{f=1} \
+              /^   NEW — Circle Four.s own\./{f=0} f' "$MINE" \
+         | grep -E '^(def|theorem|abbrev|instance|structure|inductive) ' \
+         | sed -E 's/^(def|theorem|abbrev|instance|structure|inductive) +([^ (:]+).*/\2/')
+if [ -z "$region" ]; then
+    echo "c4_carried_defs: the CARRIED region did not parse — banner moved or absent" >&2
+    exit 2
+fi
+for found in $region; do
+    listed=no
+    for name in $CARRIED; do
+        [ "$found" = "$name" ] && listed=yes
+    done
+    if [ "$listed" = "no" ]; then
+        printf '  %-14s SMUGGLED: declared inside the CARRIED banner, on no carried list\n' "$found"
+        red=1
+    fi
+done
+
 count=0
 for name in $CARRIED; do
     count=$((count + 1))
