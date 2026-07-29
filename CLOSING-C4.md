@@ -5,10 +5,12 @@
 *Written by the Circle Four prover at the circle's close, 2026-07-29.
 Everything here is a pointer to verify (norm 6). The circle's own
 letters, both seats', are filed by pin below; the artifacts are in
-`lean/`; the instruments in `audit/`. **The builder's close word is
-GIVEN (`f8dc3b2e…`) and this seat's is given below; this document
-remains a draft until the courier's seal, and its repairs since the
-builder's word are named where they sit.***
+`lean/`; the instruments in `audit/`. **SEALED.** The builder's close
+word is GIVEN (`f8dc3b2e…`), this seat's is given below, and the
+courier's seal is confirmed in her own words on the leg of 2026-07-29:
+*"Confirm the seal."* **Circle Four is closed.** Its repairs since the
+builder's word are named where they sit; nothing in this document
+changes after the seal but by a new row pointing at the old one.*
 
 ---
 
@@ -289,9 +291,13 @@ list that renders it (the builder's asked repair), and the prediction
 section now carries this seat's containment failure, which had no
 section before because the failure had not yet been made.
 
-**What this seat does not claim in its close word:** that the circle is
-closed. It is not. **The seal is the courier's**, and with it the two
-door repairs (F8, F9) and the landings her merges perform.
+**What this seat did not claim in its close word, and what has since
+happened:** the close word did not claim the circle closed, because the
+seal was not this seat's to give. **The courier gave it on the same leg
+she took custody of the prediction** — *"Confirm the seal."* — and the
+circle is closed as of that word. What remains hers and outlives the
+seal: the two door repairs (F8, F9), the landings her merges perform,
+and custody of the prediction text until Circle Five's close.
 
 ## WHAT THIS DOCUMENT IS NOT
 
