@@ -7,10 +7,16 @@
 #   - any file under crossing/ or inherited/, or the root charge, with no
 #     manifest row (an uncarried arrival posing as a carried one).
 #
-# What a green here proves: the carried files have not drifted SINCE
-# ADMISSION. It does not prove the source repository still says what it
-# said — only a seat that can reach the source can confirm that, and
-# such a seat should (door §7, the honest boundary).
+# What a green here proves: the manifest and the tree AGREE — no lone
+# drift, no missing carry, no uncarried arrival, no lone row edit.
+# It does NOT by itself prove the carried files match their admission:
+# a commit that edits a file and its manifest row together keeps this
+# green (measured by plant, the builder's bite, 2026-07-29), and a
+# commit that deletes both leaves only the row count to notice.  Those
+# modes are closed at the write surface by P3 (the manifest under the
+# prefix law), not here.  And it does not prove the source repository
+# still says what it said — only a seat that can reach the source can
+# confirm that (door §7, the honest boundary).
 #
 # Run from the repository root:  sh audit/c4_inherited.sh
 

@@ -1,0 +1,14 @@
+#!/bin/sh
+# Circle Four pre-commit chain — wired at round 2 on both seats' words.
+# Install once, per clone:
+#     git config core.hooksPath .githooks
+#
+# The carry-forward gate's word: the builder's, round 2 (C4-R2-BUILDER-WORDS.md,
+# "1fed9f22…"), given with the finding that its green proves manifest↔tree
+# AGREEMENT and not preservation since admission — CF-i records that in the
+# gate's own declaration.  The manifest's prefix gate (P3) is what closes the
+# two compound modes that finding named, at the write surface where they are
+# written.  Both seats' words on both; both bitten on both containers.
+
+sh audit/c4_manifest_prefix.sh || exit 1
+sh audit/c4_inherited.sh || exit 1

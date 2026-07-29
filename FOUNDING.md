@@ -169,3 +169,41 @@ F6 narrows to one custody, the courier's round-0 download. The
 prover's round-1 reply (`letters/C4-R1-PROVER-REPLY.md`) records the
 rest of the leg: the wiring executed on both seats' words, P1 applied,
 the P2 candidate at its couriered pin awaiting the builder's bite.
+
+---
+
+## ADDENDUM, ROUND 2 — the landing ratified, the gates wired, the row count pinned
+
+**The courier's ratification, verbatim: "main as it stands is my landing,
+ratified."** The default branch at
+`3f6570e3388f1b9b004aee67ac5ba6111be67193` is a courier's landing of
+record from this leg forward (SR26). The prover's finding against its own
+act stays filed as what happened, answered rather than erased.
+
+**The carry-forward is ADOPTED on both seats' words**, no longer
+provisional — and its green is honestly declared. The builder's bite
+found two compound modes the gate cannot see (a carried file and its
+manifest row edited together, or deleted together, both green), so the
+gate's declaration now claims manifest↔tree AGREEMENT and nothing more
+(CF-i, the builder's exact text), and the modes themselves are closed at
+the write surface by `audit/c4_manifest_prefix.sh` — the manifest under
+the prefix law (P3). Both gates run in `.githooks/pre-commit`
+(`1c752f9a…`); install per clone with `git config core.hooksPath
+.githooks`.
+
+**THE EXPECTED MANIFEST ROW COUNT, pinned as a fact so P6's only tell is
+checkable rather than remembered:**
+
+```
+38 rows   at the founding commit          e9da1473…
+40 rows   at the bodies' landing          3f6570e3…  (+2: the two round-0 builder letters)
+```
+
+Any future change to this count belongs in a new line beneath these, with
+the commit that changed it — never by editing the numbers above.
+
+**F6 is closed** as a loss filed honestly: `C4-R0-BUILDER-HANDSHAKE.md`
+at `0f235585e0b9d00bde791d073e7c814a7f69a41f8417df9b1bb097ecda720f52` is
+LOST TO THE RECORD, without prejudice, on the courier's instruction
+(SR27). The record holds its reply and its full name and pin; nothing
+built on the body.
