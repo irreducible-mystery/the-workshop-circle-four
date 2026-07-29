@@ -12,3 +12,9 @@
 
 sh audit/c4_manifest_prefix.sh || exit 1
 sh audit/c4_inherited.sh || exit 1
+
+# The carried-declaration gate: lean/C4_Q1.lean copies sealed definitions
+# because it is a zero-import single file, so every copy is re-measured
+# against the sealed artifact here. Bitten at birth on a body plant and a
+# docstring plant, both exit 1, measured without a pipe.
+sh audit/c4_carried_defs.sh || exit 1
