@@ -254,6 +254,55 @@ accurately and did not prevent it.
   crate** — the exact artifact `c2_tree.sh` exists to catch. Reproduced in
   both seats' containers.
 
+### 3.8 CORRECTION TO §3.1, EARNED BY THIS DOCUMENT BEING FILED
+
+**§3.1 nominates "no instrument here distinguishes a gate that is green
+from a gate that is not looking" as the root cause. That nomination is
+too strong as written, and the counterexample is this file.**
+
+Filing this record into the circle-two repository **blocked the commit.**
+Its pre-commit chain fired two instruments:
+
+```
+numerals   8 bare-asserted numerals unsourced   FAIL
+pointers   20 unresolved pointers               FAIL
+```
+
+**Both were right.** This document asserts `253927`, `3403`, `403`, `396`,
+`266`, `1000` — numbers measured in Circle Five's tree, which circle-two's
+instruments cannot derive — and it cites `CohomRel`, `H3`, `SR57`,
+`C5_QA_v9.lean` and sixteen other tokens that **do not resolve in
+circle-two's namespace at all.**
+
+**A gate caught a substantive defect in a document written by the seat
+claiming gates do not catch substantive defects.** The defect is real: a
+record asserting unverifiable numbers into a tree that cannot check them
+is precisely what this document spends §2 warning about.
+
+**So the corrected claim, which is narrower and better:** this record's
+instruments are **good at what is mechanically decidable within one tree**
+— unresolved pointers, unsourced numerals, retyped counts, build
+artifacts, axiom drift — and **blind to everything requiring a second
+tree, a second reading, or a semantic judgement.** Every instance in §3.1
+is of the second kind. **Every catch in §3.2 is of the second kind too.**
+That is a sharper root cause than the one first offered, and this document
+had to trip a gate to earn it.
+
+**And the disposal of this document is itself an instance worth
+declaring.** It is filed in circle-two under
+`system/crossings/four-to-five/` — **a directory §3.1 names as guarded by
+no instrument.** That is deliberate, and it follows the record's own
+precedent: `REGISTER` row 16 admitted foreign material as a *quarantined,
+declared-ungated annex* rather than buying two dozen exemptions on frozen
+prose. **Twenty-eight exemptions for a document that will never change
+would turn the exemption ledger into the noise its own header warns
+about.**
+
+**The difference between using that corridor and exploiting it is this
+paragraph.** The material is foreign to circle-two's instruments, it is
+not watched by them, and a reader should treat every number in it as
+measured in Circle Five's tree and verifiable only there.
+
 ---
 
 ## 4. WHAT THIS SEAT WOULD TELL AN AUTOPSY, IN FOUR SENTENCES
